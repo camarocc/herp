@@ -1,5 +1,6 @@
 <template>
   <div class="index">
+  <div class="menu-bg"></div>
 	<div class="top-wrapper clear">
 		<div class="logo left"></div>
 		<div class="right">
@@ -57,7 +58,18 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
 .index{
+	height:100%;
+	.menu-bg{
+		width:220px;
+		position:fixed;
+		height:100%;
+		left:0;
+		top:0;
+		background: #2A3339;
+	}
 	.top-wrapper{
+		position:relative;
+		z-index:99;
 		width:100%;
 		height:72px;
 		line-height:72px;
@@ -115,10 +127,11 @@ export default {
 	}
 	.menu-wrapper{
 		width:220px;
+		background: #2a3339;
+
 	}
 	.content-wrapper{
 		margin-left:220px;
-		border-left:1px solid #BFCBD9;
 		padding-bottom: 65px;
 
 	}

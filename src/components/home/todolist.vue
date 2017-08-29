@@ -39,6 +39,7 @@
 				padding:5px 15px 15px;
 				font-size:13px;
 				li{
+					display:flex;
 					height:18px;
 					line-height:18px;
 					margin-top:4px;
@@ -46,6 +47,7 @@
 					color: #97A8BE;
 					line-height: 25px;
 					span{
+						flex:1;
 						 white-space:nowrap;  
 						 overflow:hidden;
 						 text-overflow : ellipsis ;
@@ -53,6 +55,7 @@
 						font-family: PingFangSC-Regular;
 					}
 					.new{
+						flex:0 0 30px;
 						margin-left:28px;
 						font-size: 12px;
 						color: rgb(255,79,79);

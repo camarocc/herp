@@ -28,6 +28,8 @@
 				<div style="border-top:1px solid #bfcbd9">
 					<v-todo-list :title="'待操作任务'" :list="todo.todo1"></v-todo-list>
 					<v-todo-list :title="'待操作任务'" :list="todo.todo1"></v-todo-list>
+					<v-todo-list :title="'待操作任务'" :list="todo.todo1"></v-todo-list>
+					<v-todo-list :title="'待操作任务'" :list="todo.todo1"></v-todo-list>
 				</div>				
 			</div>
 		</div>
@@ -36,6 +38,13 @@
 			<h3 class="title">Sales performance statistics</h3>
 		      <v-Echarts v-if="!!opinion1" :id='"mian2"' :opinion="opinion1" :styles="{width:'100%',height:'420px'}"></v-Echarts>
 		    </div>
+		    <div class="todolist2">
+		    	<h3 class="title">My to-do list</h3>
+		    	<ul class="list clear">
+		    		<li v-for="i in 15"><v-todo-list :title="'待操作任务'" :list="todo.todo1"></v-todo-list></li>
+		    	</ul>
+		    </div>
+		    <div class="todolist3"></div>
 		</div>
     </div>
   </div>
@@ -244,6 +253,19 @@ let pageArray = [];
 				}
 				.echarts2{
 					position: relative;
+					.dd{
+					  width: 100px;
+					  height: 30px;
+					  line-height: 30px;
+					  position: absolute;
+					  left: 50%;
+					  top: 50%;
+					  margin-top: -15px;
+					  margin-left: -50px;
+					  font-family: PingFangSC-Regular;
+					  font-size: 15px;
+					  color: #44576C;
+					}
 				}
 				.list-persent{
 					width:193px;
@@ -281,37 +303,47 @@ let pageArray = [];
 		.right-wrapper{
 			flex:1;
 			margin-left:20px;
-		}
-		.echarts1{
-			width: 100%;
-			height: 480px;
-			background: #FFFFFF;
-			border: 1px solid #EFEFEF;
-			box-shadow: 0 2px 4px 0 rgba(176,176,176,0.50);
-			border-radius: 4px;
-			.title{
-				font-size: 22px;
-				color: #1F2D3D;
-				margin:30px 0 0 37px;
+			.echarts1{
+				width: 100%;
+				height: 480px;
+				background: #FFFFFF;
+				border: 1px solid #EFEFEF;
+				box-shadow: 0 2px 4px 0 rgba(176,176,176,0.50);
+				border-radius: 4px;
+				.title{
+					font-size: 22px;
+					color: #1F2D3D;
+					margin:30px 0 0 37px;
+				}
 			}
-		}
-		
-		.dd{
-		  width: 100px;
-		  height: 30px;
-		  line-height: 30px;
-		  position: absolute;
-		  left: 50%;
-		  top: 50%;
-		  margin-top: -15px;
-		  margin-left: -50px;
-		  font-family: PingFangSC-Regular;
-		  font-size: 15px;
-		  color: #44576C;
-		}
+			.todolist2{
+				margin-top: 50px;
+			    width: 100%;
+			    padding: 30px 40px;
+			    background: #fff;
+			    border: 1px solid #efefef;
+			    box-shadow: 0 2px 4px 0 hsla(0,0%,69%,.5);
+			    border-radius: 4px;
+			    .title{
+			    	font-family: PingFangSC-Regular;
+					font-size: 22px;
+					color: #1F2D3D;
+			    }
+			    .list{
+			    	margin-top:30px;
+			    	width:100%;
+			    	li{
+			    		float: left;
+			    		width:25%;
+			    		&:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4){
+							border-top:1px solid #bfcbd9;
+			    		}
+			    	}
+			    	
+			    }
+			}
+		}	
 	}
-	
-
 }
 
 </style>
