@@ -1,7 +1,6 @@
 <template>
   <div class="home">
 	<v-tap :title="'HOME'">
-		<div class="right" slot="right">000000000</div>
 	</v-tap>
 	<div class="home-wrapper">
 		<div class="left-wrapper">
@@ -44,7 +43,12 @@
 		    		<li v-for="i in 15"><v-todo-list :title="'待操作任务'" :list="todo.todo1"></v-todo-list></li>
 		    	</ul>
 		    </div>
-		    <div class="todolist3"></div>
+		    <div class="todolist3">
+		    	<h3 class="title">My to-do list</h3>
+		    	<ul class="list clear">
+		    		<li v-for="i in 5"><v-todo-list :title="'待操作任务'" :list="todo.todo1"></v-todo-list></li>
+		    	</ul>
+		    </div>
 		</div>
     </div>
   </div>
@@ -336,6 +340,32 @@ let pageArray = [];
 			    		float: left;
 			    		width:25%;
 			    		&:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4){
+							border-top:1px solid #bfcbd9;
+			    		}
+			    	}
+			    	
+			    }
+			}
+			.todolist3{
+				margin-top: 50px;
+			    width: 100%;
+			    padding: 30px 40px;
+			    background: #fff;
+			    border: 1px solid #efefef;
+			    box-shadow: 0 2px 4px 0 hsla(0,0%,69%,.5);
+			    border-radius: 4px;
+			    .title{
+			    	font-family: PingFangSC-Regular;
+					font-size: 22px;
+					color: #1F2D3D;
+			    }
+			    .list{
+			    	margin-top:30px;
+			    	width:100%;
+			    	li{
+			    		float: left;
+			    		width:33%;
+			    		&:nth-child(1),&:nth-child(2),&:nth-child(3){
 							border-top:1px solid #bfcbd9;
 			    		}
 			    	}

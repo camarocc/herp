@@ -1,7 +1,7 @@
-import Hello from '@/components/Hello'
+import GroupList from '@/components/group/group-list'
 export default [
 	{
-		path:'/hello',
-		component:Hello
+		path:'/group/group-list',
+		component:GroupList
 	}
 ]

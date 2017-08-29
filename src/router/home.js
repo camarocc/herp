@@ -1,5 +1,5 @@
 import Index from '@/components/home/index'
-import Home1 from '@/components/home/home'
+import Home from '@/components/home/home'
 import Group from './group'
 export default [
 	{
@@ -8,7 +8,7 @@ export default [
 		children:[{
 			path:'/home',
 			alias:'/index',
-			component:Home1
+			component:Home
 		},...Group]
 	}
 ]
